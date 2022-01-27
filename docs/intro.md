@@ -14,16 +14,4 @@ __
 * **Discord Server** // https://discord.com/invite/Pqdj73UTt6
 * **Habitat DAO China** // https://t.me/Habitat_China
 
-## **Mainnet App** 🌈
---> https://0xhabitat.org/app
-
-#### **Communities**
-https://0xhabitat.org/app/#habitat-communities
-
-#### **Account Page**
-https://0xhabitat.org/app/#habitat-account
-
-## **One Pager**
-![0xHabitat__onepager](img/onepager.png)
-
 ![banner](img/banner.png)
