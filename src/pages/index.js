@@ -10,8 +10,7 @@ import AboutSection from './sections/AboutSection';
 import DiamondSection from './sections/DiamondSection';
 import TokenSection from './sections/TokenSection';
 import RoadmapSection from './sections/RoadmapSection';
-import TechSection from './sections/TechSection';
-import SocialSection from './sections/SocialSection';
+import InfoSection from './sections/InfoSection';
 import BackgroundAnimation from './components/Background';
 
 function LandingPage() {
@@ -23,8 +22,7 @@ function LandingPage() {
       <DiamondSection />
       <TokenSection />
       <RoadmapSection />
-      <TechSection />
-      <SocialSection />
+      <InfoSection />
     </div>
   );
 }

@@ -51,7 +51,7 @@ class BackgroundAnimation extends React.Component {
     return (
       <div className='background__container'>
         <div className='background__wrapper'>
-          <canvas width='8' height='8' className='background__animation' ref={this.canvasRef} />
+          <canvas width='12' height='12' className='background__animation' ref={this.canvasRef} />
         </div>
       </div>
     )

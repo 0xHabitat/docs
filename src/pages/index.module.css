@@ -23,10 +23,15 @@
     padding: 2rem;
   }
 }
+
+/* TODO: 
+    * scale heights with screen -- @media? 
+    * darkmode shape-1,2,3 -- access fill/style property of svg
+*/
 /* about section */
 .section__about {
   display:block;
-  height: 20em;
+  height: 30em; 
   border: 1px blueviolet solid;
 }
 /* diamond section */
@@ -48,14 +53,9 @@
   border: 1px blueviolet solid;
 }
 /* tech section */
-.section__tech {
+.section__info {
   display:block;
-  height: 20em;
+  height: 40em;
   border: 1px blueviolet solid;
 }
 /* social section */
-.section__socials {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
