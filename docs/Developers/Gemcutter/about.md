@@ -12,8 +12,8 @@ The framework is just a proof of concept, this documentation contains more featu
 
 ### Useful things
 
-* [Repository](https://github.com/0xHabitat/gemcutter)
-* cite marcocastignoli#2857 and/or tjvs#7114 on the [official diamond discord](https://discord.com/invite/kQewPw2)
+* [Repository (proof of concept)](https://github.com/0xHabitat/gemcutter-poc)
+* Join the discussion on the #gemcutter channel in the [official diamond discord](https://discord.gg/HVWjGCXZYC)
 
 ## EIP-2535 Diamonds simplified
 
