@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Build and Scale your DAO',
+  title: 'Habitat',
   tagline: 'Start your organization on Optimism',
-  url: 'https://github.com/0xHabitat/docs',
+  url: 'https://0xhabitat.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,7 +39,12 @@ const config = {
           routeBasePath: '/docs', // /docs landingpage controller
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/0xHabitat/docs',
+          editUrl: 'https://github.com/0xHabitat/docs/tree/main',
+        },
+        blog: {
+          blogTitle: 'Habitat Blog',
+          blogDescription: 'Community updates and more!',
+          postsPerPage: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -58,7 +63,7 @@ const config = {
         switchConfig: {
           darkIcon: ' ',
           darkIconStyle: {
-            marginLeft: '2px',
+            marginLeft: '1px',
           },
           lightIcon: ' ',
           lightIconStyle: {
@@ -67,7 +72,7 @@ const config = {
         },
       },
       navbar: {
-        hideOnScroll: false,
+        hideOnScroll: true,
         logo: {
           alt: '🌱 Habitat',
           src: 'img/v2-logo-full.svg',
@@ -78,6 +83,25 @@ const config = {
           height: 32,
         },
         items: [
+          {
+            type: 'doc',
+            position: 'left',
+            docId: 'intro',
+            label: 'Docs',
+            className: 'navbar_item',
+          },
+          { 
+            to: 'blog', 
+            label: 'Blog', 
+            position: 'left',
+            className: 'navbar_item',
+          },
+          // {
+          //   type: 'docSidebar',
+          //   position: 'left',
+          //   sidebarId: 'intro',
+          //   label: 'intro',
+          // },
           // {
           //   type: 'search',
           //   position: 'right',
@@ -85,21 +109,21 @@ const config = {
           {
             href: 'https://github.com/0xHabitat',
             // label: 'GitHub',
-            className: 'header-github-link',
+            className: 'navbar_github',
             'aria-label': 'GitHub repository',
             position: 'right'
           },
           {
             href: 'https://twitter.com/0xhabitat',
             // label: 'Twitter',
-            className: 'header-twitter-link',
+            className: 'navbar_twitter',
             'aria-label': 'Twitter posts',
             position: 'right'
           },
           {
             href: 'https://discord.com/invite/Pqdj73UTt6',
             // label: 'Discord',
-            className: 'header-discord-link',
+            className: 'navbar_discord',
             'aria-label': 'Discord community',
             position: 'right'
           },
@@ -107,44 +131,14 @@ const config = {
         ],
       },
       footer: {
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Documentation',
-                to: '/docs', //docs landingpage controller
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/0xhabitat',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.com/invite/Pqdj73UTt6',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/habitat_official',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/0xHabitat/habitat',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Habitat`,
+        logo: {
+          alt: '🌱 Habitat',
+          src: 'img/v2-logo-full.svg',
+          srcDark: 'img/v2-logo-full_dark.svg',
+          href: '/',
+          width: 200,
+          height: 32,
+        },
       },
       prism: {
         theme: lightCodeTheme,

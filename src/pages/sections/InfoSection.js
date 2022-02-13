@@ -58,7 +58,7 @@ let CSS = `
   filter: drop-shadow(0px 3.57004px 3.57004px rgba(0, 0, 0, 0.25));
 }
 #buttons button:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 #button_twitter {
   background: #A3DDE9;

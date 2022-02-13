@@ -4,12 +4,14 @@
  */
 
 /* @dev manages the height of each section, which allows the svg shapes and background animation to scale properly */
+
+
 @media screen and (max-width: 600px) {
   .landing {
     --height_about: 50em; /** ✅ */
     --height_token: 55em; /** ✅ */
     --height_diamond: 50em;
-    --height_roadmap: 42em;
+    --height_roadmap: 45em;
     --height_info: 105em;
   }
 }
@@ -18,7 +20,7 @@
     --height_about: 45em; /** ✅ */
     --height_token: 50em; /** ✅ */
     --height_diamond: 30em;
-    --height_roadmap: 45em;
+    --height_roadmap: 50em;
     --height_info: 80em;
   }
 }
@@ -27,7 +29,7 @@
     --height_about: 42em; /** ✅ */
     --height_token: 38em; /** ✅ */
     --height_diamond: 30em; 
-    --height_roadmap: 45em;
+    --height_roadmap: 50em;
     --height_info: 70em;
   }
 }
@@ -36,7 +38,7 @@
     --height_about: 45em; /** ✅ */
     --height_token: 35em; /** ✅ */
     --height_diamond: 30em;
-    --height_roadmap: 25em;
+    --height_roadmap: 30em;
     --height_info: 50em;
   }
 }
@@ -45,7 +47,7 @@
     --height_about: 50em; /** ✅ */
     --height_token: 45em; /** ✅ */
     --height_diamond: 30em;
-    --height_roadmap: 25em;
+    --height_roadmap: 30em;
     --height_info: 60em;
   }
 }
@@ -54,7 +56,7 @@
     --height_about: 70em; /** ✅ */
     --height_token: 50em;
     --height_diamond: 30em;
-    --height_roadmap: 25em;
+    --height_roadmap: 30em;
     --height_info: 80em;
   }
 }
@@ -63,7 +65,7 @@
     --height_about: 80em; /** ✅ */
     --height_token: 60em; /** ✅ */
     --height_diamond: 30em;
-    --height_roadmap: 25em;
+    --height_roadmap: 30em;
     --height_info: 100em;
   }
 }
@@ -74,36 +76,30 @@
   width: 100vw;
   overflow: hidden;
 }
+.section_about, .section_diamond, .section_token, .section_roadmap, .section_info {  
+  /* border: 5px slateblue solid; */
+  position: relative;
+  display: flex;
+}
 .section_about { 
   /* border: 5px slateblue solid; */
   height: var(--height_about); 
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 .section_diamond { 
   /* border: 5px slateblue solid; */
   height: var(--height_diamond); 
-  position: relative;
-  display: flex;
 }
 .section_token { 
   /* border: 5px slateblue solid; */
   height: var(--height_token); 
-  position: relative;
-  display: flex;
 }
 .section_roadmap { 
   /* border: 5px slateblue solid; */
   height: var(--height_roadmap); 
-  position: relative;
-  display: flex;
 }
 .section_info { 
   /* border: 5px slateblue solid; */
   height: var(--height_info); 
-  position: relative;
-  display: flex;
 }
 .shapes {
   fill: #fff;

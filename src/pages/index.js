@@ -4,8 +4,9 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
+import {useLocation} from '@docusaurus/router';
 
-import BannerSection from './sections/BannerSection';
+import CoverSection from './sections/CoverSection';
 import AboutSection from './sections/AboutSection';
 import DiamondSection from './sections/DiamondSection';
 import TokenSection from './sections/TokenSection';
@@ -20,12 +21,9 @@ button[class*="DetachedSearchButton"] {
 `;
 
 function LandingPage() {
-  // window.addEventListener('resize', function() {
-  //   //code
-  // });
   return (
     <div className={styles.landing}> 
-      <BannerSection />
+      <CoverSection />
       <Background /> 
       <AboutSection />
       <DiamondSection />
@@ -38,10 +36,10 @@ function LandingPage() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  siteConfig.themeConfig.navbar.hideOnScroll = true;
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title='Home'
       description="Description will go into a meta tag in <head />">
       <LandingPage />
       <style>{CSS}</style>

@@ -12,34 +12,46 @@ let CSS = `
   z-index: 1;
   text-align: center;
 }
+#roadmap_box {
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+.phase_marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.marker_title {
+  width: 4em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marker_title h3 {
+  margin: auto;
+}
 
 @media screen and (min-width: 300px) {
   #roadmap_container {
+    margin-top: 5em;
     margin-left: 0;
   }
   #roadmap_box {
     justify-content: flex-start;
     align-content: flex-start;
-    margin: auto;
     max-width: 35em;
-    display: flex;
     flex-direction: column;
-    margin-bottom: 0;
-    margin-top: -4em;
-    position: relative;
   }
   .phase_marker {
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 3em;
-    margin: auto;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: -6em;
   }
   .marker_line {
     border-left: none;
@@ -50,24 +62,8 @@ let CSS = `
     margin-left: 1em;
     margin-right: 1em;
   }
-  .marker_title {
-    width: 4em;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .marker_title h3 {
-    margin: auto;
-  }
 
-  #phase_prototype {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  #phase_framework {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  #phase_multichain {
+  #phase_prototype, #phase_framework, #phase_multichain {
     background: rgba(0, 0, 0, 0.1);
   }
 
@@ -75,34 +71,24 @@ let CSS = `
     display: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   #roadmap_container {
+    margin-top: 5em;
     margin-left: 7.5em;
   }
   #roadmap_box {
     justify-content: flex-start;
     align-content: flex-start;
-    margin: auto;
     max-width: 35em;
-    display: flex;
     flex-direction: column;
-    margin-bottom: 0;
-    margin-top: -4em;
-    position: relative;
   }
   .phase_marker {
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 3em;
-    margin: auto;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: -6em;
   }
   .marker_line {
     border-left: none;
@@ -113,24 +99,8 @@ let CSS = `
     margin-left: 1em;
     margin-right: 1em;
   }
-  .marker_title {
-    width: 4em;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .marker_title h3 {
-    margin: auto;
-  }
 
-  #phase_prototype {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  #phase_framework {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  #phase_multichain {
+  #phase_prototype, #phase_framework, #phase_multichain {
     background: rgba(0, 0, 0, 0.1);
   }
 
@@ -138,34 +108,24 @@ let CSS = `
     display: none;
   }
 }
-
-
 @media screen and (min-width: 1080px) {
   #roadmap_container {
+    margin-top: 8em;
     margin-left: 0;
   }
   #roadmap_box {
     justify-content: center;
     align-content: center;
-    margin: auto;
     max-width: 100%;
-    display: flex;
     flex-direction: row;
-    margin-bottom: 4em;
-    margin-top: 0;
   }
   .phase_marker {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 4em;
     height: 10em;
-    margin: auto;
-    margin-top:0;
+    margin-top: -5.5em;
     margin-left: -1.25em;
     margin-right: -1.25em;
-    margin-bottom: 0;
   }
   .marker_line {
     border-left: 4px dotted black;
@@ -176,23 +136,7 @@ let CSS = `
     margin-left: 0;
     margin-right: 0;
   }
-  .marker_title {
-    width: 4em;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .marker_title h3 {
-    margin: auto;
-  }
-  #phase_prototype {
-    background: none;
-  }
-  #phase_framework {
-    background: none;
-  }
-  #phase_multichain {
+  #phase_prototype, #phase_framework, #phase_multichain {
     background: none;
   }
   #shape_arrow {
@@ -210,58 +154,63 @@ let CSS = `
   }
 }
 
-
+#phase_prototype, #phase_framework, #phase_multichain {
+  border-radius: .4em;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: .25em;
+}
+#phase_prototype {
+  width: 13em;
+}
+#phase_framework, #phase_multichain {
+  width: 25em;
+}
 
 #roadmap_arrow {
   position: relative;
 }
 
-#phase_prototype {
-  border-radius: .4em;
-  margin-top: 6em;
-  width: 13em;
-  padding-bottom: .25em;
+.features_container {
+  display:flex;
+  flex-wrap: nowrap;
+  margin: auto;
 }
-#phase_framework {
-  border-radius: .4em;
-  margin-top: 6em;
-  width: 25em;
-  padding-bottom: .25em;
+.features_box {
+  width: 12.5em;
+  margin: auto;
 }
-#phase_multichain {
-  border-radius: .4em;
-  margin-top: 6em;
-  width: 25em;
-  padding-bottom: .25em;
-}
+
 .title_present {
   background: #222222;
   color: #FFFFFF;
   height: 2em;
   line-height: 2em;
+  cursor: default;
 }
 .title_future {
   background: #FFFFFF;
   color: #000000;
   height: 2em;
   line-height: 2em;
+  cursor: default;
 }
-.feature_complete {
-  background: grey;
-  border-radius: .3em;
-  border: none;
+.feature_complete, .feature_incomplete {
   width: 14em;
   margin: .4em;
   height: 1.8em;
+}
+.feature_complete {
+  background: grey;
+  color: white;
+  border-radius: .3em;
+  border: none;
 }
 .feature_incomplete {
   background: white;
   color: black;
   border-radius: .3em;
   border: .1px grey solid;
-  width: 14em;
-  margin: .4em;
-  height: 1.8em;
 }
 `;
 
@@ -277,11 +226,13 @@ function RoadmapSection() {
             <div id='phase_prototype'>
               <h4 className='title_present'>Prototype</h4>
               <p>Proof of Concept</p>
-              <td>
-                <button className='feature_complete'>🏦 Treasury Management</button>
-                <button className='feature_complete'>🏵 Gov Token Creation</button>
-                <button className='feature_incomplete'>🗳 Basic Voting</button>
-              </td>
+              <div className='features_container'>
+                <div className='features_box'>
+                  <button className='feature_complete'>🏦 Treasury Management</button>
+                  <button className='feature_complete'>🏵 Gov Token Creation</button>
+                  <button className='feature_incomplete'>🗳 Basic Voting</button>
+                </div>
+              </div>
             </div>
             <div className='phase_marker'>
               <div className='marker_title'>
@@ -293,16 +244,18 @@ function RoadmapSection() {
             <div id='phase_framework'>
               <h4 className='title_future'>DAO Framework on Optimism</h4>
               <p>Team + Community Collaboration</p>
-              <td>
-                <button className='feature_incomplete'>✅ Simple Majority Vote</button>
-                <button className='feature_incomplete'>🔒 Token Staking</button>
-                <button className='feature_incomplete'>🎛 Token Distribution</button>
-              </td>
-              <td>              
-                <button className='feature_incomplete'>⛓ On-Chain Execution</button>
-                <button className='feature_incomplete'>📥 Delegation</button>
-                <button className='feature_incomplete'>🗽 Community Dashboard</button>
-              </td>
+              <div className='features_container'>
+                <div className='features_box'>
+                  <button className='feature_incomplete'>✅ Simple Majority Vote</button>
+                  <button className='feature_incomplete'>🔒 Token Staking</button>
+                  <button className='feature_incomplete'>🎛 Token Distribution</button>
+                </div>
+                <div className='features_box'>              
+                  <button className='feature_incomplete'>⛓ On-Chain Execution</button>
+                  <button className='feature_incomplete'>📥 Delegation</button>
+                  <button className='feature_incomplete'>🗽 Community Dashboard</button>
+                </div>
+              </div>
             </div>
 
             <div className='phase_marker'>
@@ -318,16 +271,18 @@ function RoadmapSection() {
                 <div id='shape_arrow'></div>
               </div>
               <p>Fully Decentralized Organization</p>
-              <td>
-                <button className='feature_incomplete'>📈 Token Launchpad</button>
-                <button className='feature_incomplete'>🌉 Layer 2 Bridges</button>
-                <button className='feature_incomplete'>🐸 Identity Integration</button>
-              </td>
-              <td>
-                <button className='feature_incomplete'>🗣 Social Tools</button>
-                <button className='feature_incomplete'>🔌 Custom DAO Integrations</button>
-                <button className='feature_incomplete'>🏛 Voting Module Library</button>
-              </td>
+              <div className='features_container'>
+                <div className='features_box'>
+                  <button className='feature_incomplete'>📈 Token Launchpad</button>
+                  <button className='feature_incomplete'>🌉 Layer 2 Bridges</button>
+                  <button className='feature_incomplete'>🐸 Identity Integration</button>
+                </div>
+                <div className='features_box'>
+                  <button className='feature_incomplete'>🗣 Social Tools</button>
+                  <button className='feature_incomplete'>🔌 Custom DAO Integrations</button>
+                  <button className='feature_incomplete'>🏛 Voting Module Library</button>
+                </div>
+              </div>
             </div>
 
           </div>
