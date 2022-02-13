@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Shape3 from '/img/shape-3.svg';
 import Distributed from '/img/image-info-distributed.svg';
 import Habitat from '/img/image-info-habitat.svg';
+import Link from '@docusaurus/Link';
 
 let CSS = `
 #info_wrapper {
@@ -43,7 +44,11 @@ let CSS = `
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
 }
-#buttons button {
+.button {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:nowrap;
   border-radius: .5em;
   cursor: pointer;
   border: none;
@@ -57,7 +62,7 @@ let CSS = `
   margin-bottom: 1em;
   filter: drop-shadow(0px 3.57004px 3.57004px rgba(0, 0, 0, 0.25));
 }
-#buttons button:hover {
+.button:hover {
   opacity: 0.6;
 }
 #button_twitter {
@@ -77,7 +82,7 @@ let CSS = `
   color: #000000;
 }
 #button_docs {
-  background: #FFFFFF
+  background: #FFFFFF;
   color: #000000;
 }
 `;
@@ -107,11 +112,11 @@ export default function InfoSection() {
         </div>
         <h2 id='info_title' >Join the Habitat 🏕</h2>
         <div id='buttons'>
-          <button id='button_twitter'>🐦 Twitter</button>
-          <button id='button_discord'>💬 Discord</button>
-          <button id='button_github'>🔧 Github</button>
-          <button id='button_blog'>📒 Blog</button>
-          <button id='button_docs'>🔎 Docs</button>
+          <Link id='button_twitter' className='button' to='https://twitter.com/0xhabitat'>🐦 Twitter</Link>
+          <Link id='button_discord' className='button' to='https://discord.com/invite/Pqdj73UTt6'>💬 Discord</Link>
+          <Link id='button_github' className='button' to='https://github.com/0xHabitat'>🔧 Github</Link>
+          <Link id='button_blog' className='button' to='/blog'>📒 Blog</Link>
+          <Link id='button_docs' className='button' to='/docs'>🔎 Docs</Link>
         </div>
       </div>
       <style>{CSS}</style>
