@@ -15,6 +15,24 @@
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
 }
+html[data-theme='dark'] {
+  --ifm-color-primary: #635bff;
+  --ifm-color-primary-dark: #4238ff;
+  --ifm-color-primary-darker: #3227ff;
+  --ifm-color-primary-darkest: #0c00f2;
+  --ifm-color-primary-light: #847eff;
+  --ifm-color-primary-lighter: #948fff;
+  --ifm-color-primary-lightest: #c6c3ff;
+}
+/* html[data-theme='dark'] {
+  --ifm-color-primary: #7768ee;
+  --ifm-color-primary-dark: #5b49eb;
+  --ifm-color-primary-darker: #4d3ae9;
+  --ifm-color-primary-darkest: #2e18d7;
+  --ifm-color-primary-light: #9387f1;
+  --ifm-color-primary-lighter: #a196f3;
+  --ifm-color-primary-lightest: #cac4f8;
+} */
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -27,13 +45,6 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 /* Background animation */
-.background__wrapper {
-  display:block;
-  position:absolute;
-  height: 160em;
-  width: 100vw;
-  overflow: hidden;
-}
 @keyframes loop {
   0% {
     transform-origin: 0% 0%;
@@ -51,7 +62,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     transform-origin: 0% 100%;
   }
 }
-.background__animation {
+.background_animation {
+  /* background-color: rgba(0, 168, 162, 0.512); */
   display:flex;
   position: absolute;
   top: 0;
@@ -66,8 +78,11 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   will-change: transform;
   filter: brightness(.5, 1);
 }
-html[data-theme=dark] .background__animation {
-  opacity: .25;
+html[data-theme=dark] .background_animation {
+  background: rgb(0, 4, 255);
+  /* background-image: linear-gradient(45deg, rgb(12, 159, 147), 10%, rgba(0,4,255)); */
+  /* background-blend-mode:darken; */
+  opacity: .48;
 }
 
 /* Navbar Searchbar -- @dev see const hideSearch */
@@ -228,14 +243,6 @@ div[class*="toggleTrackThumb"] {
   transform: scale(1.05);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   outline: none;
-}
-
-
-.shape-1 svg {
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  margin:0;
 }
 
 /* .footer {

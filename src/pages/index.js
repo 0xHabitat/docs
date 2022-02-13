@@ -11,13 +11,22 @@ import DiamondSection from './sections/DiamondSection';
 import TokenSection from './sections/TokenSection';
 import RoadmapSection from './sections/RoadmapSection';
 import InfoSection from './sections/InfoSection';
-import BackgroundAnimation from './components/Background';
+import Background from './components/Background';
+
+let CSS = `
+button[class*="DetachedSearchButton"] { 
+  display:none; 
+}
+`;
 
 function LandingPage() {
+  // window.addEventListener('resize', function() {
+  //   //code
+  // });
   return (
-    <div className='landingpage'> 
-      <BackgroundAnimation /> 
+    <div className={styles.landing}> 
       <BannerSection />
+      <Background /> 
       <AboutSection />
       <DiamondSection />
       <TokenSection />
@@ -29,15 +38,13 @@ function LandingPage() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  let hideSearch = `button[class*="DetachedSearchButton"] { display:none; }`
+  siteConfig.themeConfig.navbar.hideOnScroll = true;
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <LandingPage />
-      <style>
-        {hideSearch}
-      </style>
+      <style>{CSS}</style>
     </Layout>
   );
 }

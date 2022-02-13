@@ -67,6 +67,7 @@ const config = {
         },
       },
       navbar: {
+        hideOnScroll: false,
         logo: {
           alt: '🌱 Habitat',
           src: 'img/v2-logo-full.svg',
@@ -112,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/', //docs landingpage controller
+                to: '/docs', //docs landingpage controller
               },
             ],
           },
