@@ -17,6 +17,8 @@ import Background from './components/Background';
 let CSS = `
 button[class*="DetachedSearchButton"] { 
   display:none; 
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 `;
 

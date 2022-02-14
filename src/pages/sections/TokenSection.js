@@ -22,7 +22,7 @@ let CSS = `
 }
 #token_content {
   max-width: 38em;
-  min-width: 20em;
+  min-width: 18em;
   flex: 1 1 0;
   margin: 1em;
 }

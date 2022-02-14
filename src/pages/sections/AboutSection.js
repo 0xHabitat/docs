@@ -22,7 +22,7 @@ let CSS = `
 }
 #about_content {
   max-width: 40em;
-  min-width: 20em;
+  min-width: 16em;
   flex: 1 1 0;
   margin-right: 2em;
 }

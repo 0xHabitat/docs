@@ -5,20 +5,28 @@
 
 /* @dev manages the height of each section, which allows the svg shapes and background animation to scale properly */
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 370px) {
   .landing {
-    --height_about: 50em; /** ✅ */
-    --height_token: 55em; /** ✅ */
+    --height_about: 60em;
+    --height_token: 70em;
+    --height_diamond: 50em;
+    --height_roadmap: 40em;
+    --height_info: 120em;
+  }
+}
+@media screen and (min-width: 370px) {
+  .landing {
+    --height_about: 50em;
+    --height_token: 65em;
     --height_diamond: 50em;
     --height_roadmap: 45em;
-    --height_info: 105em;
+    --height_info: 120em;
   }
 }
 @media screen and (min-width: 600px) {
   .landing {
-    --height_about: 45em; /** ✅ */
-    --height_token: 50em; /** ✅ */
+    --height_about: 50em;
+    --height_token: 55em;
     --height_diamond: 30em;
     --height_roadmap: 50em;
     --height_info: 80em;
@@ -26,17 +34,17 @@
 }
 @media screen and (min-width: 768px) {
   .landing {
-    --height_about: 42em; /** ✅ */
-    --height_token: 38em; /** ✅ */
+    --height_about: 45em;
+    --height_token: 38em;
     --height_diamond: 30em; 
     --height_roadmap: 50em;
     --height_info: 70em;
   }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 996px) {
   .landing {
-    --height_about: 45em; /** ✅ */
-    --height_token: 35em; /** ✅ */
+    --height_about: 40em; 
+    --height_token: 35em;
     --height_diamond: 30em;
     --height_roadmap: 30em;
     --height_info: 50em;
@@ -44,8 +52,8 @@
 }
 @media screen and (min-width: 1200px) {
   .landing {
-    --height_about: 50em; /** ✅ */
-    --height_token: 45em; /** ✅ */
+    --height_about: 50em;
+    --height_token: 45em;
     --height_diamond: 30em;
     --height_roadmap: 30em;
     --height_info: 60em;
@@ -53,7 +61,7 @@
 }
 @media screen and (min-width: 1500px) {
   .landing {
-    --height_about: 70em; /** ✅ */
+    --height_about: 70em;
     --height_token: 50em;
     --height_diamond: 30em;
     --height_roadmap: 30em;
@@ -62,8 +70,8 @@
 }
 @media screen and (min-width: 2000px) {
   .landing {
-    --height_about: 80em; /** ✅ */
-    --height_token: 60em; /** ✅ */
+    --height_about: 80em;
+    --height_token: 60em;
     --height_diamond: 30em;
     --height_roadmap: 30em;
     --height_info: 100em;

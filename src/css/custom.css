@@ -14,6 +14,7 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  overflow-x: hidden !important;
 }
 html[data-theme='dark'] {
   --ifm-color-primary: #635bff;
@@ -73,40 +74,22 @@ form[class*="Form"] {
 }
 
 @media screen and (max-width: 996px) {
-  /* github */
-  .navbar_github:before {
+  .navbar_github:before, html[data-theme=dark] .navbar_github:before {
     content: '🔧 Github';
-    width: 5em;
-    height: 1.25em;
-    display: flex;
-    background: none;
   }
-  html[data-theme=dark] .navbar_github:before {
-    background: none;
+  .navbar_twitter:before, html[data-theme=dark] .navbar_twitter:before {
+    content: '🐦 Twitter'
   }
-  /* twitter */
-  .navbar_twitter:before {
-    content: '🐦 Twitter';
-    width: 5em;
-    height: 1.25em;
-    display: flex;
-
-    background-image: none;
+  .navbar_discord:before, html[data-theme=dark] .navbar_discord:before {
+    content: '💬 Discord'
   }
-  html[data-theme=dark] .navbar_twitter:before {
-    background-image: none;
-  }
-  /* discord */
-  .navbar_discord:before {
-    content: '💬 Discord';
-    width: 5em;
+  /* github */
+  .navbar_github:before, html[data-theme=dark] .navbar_github:before, .navbar_twitter:before, html[data-theme=dark] .navbar_twitter:before, .navbar_discord:before, html[data-theme=dark] .navbar_discord:before {
+    width: 8em;
     height: 1.25em;
     display: flex;
     background-image: none;
-  }
-  html[data-theme=dark] .navbar_discord:before {
-    background-image: none; 
-  }
+  } 
 }
 @media screen and (min-width: 996px) {
 /* github */

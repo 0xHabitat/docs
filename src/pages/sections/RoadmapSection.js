@@ -34,15 +34,33 @@ let CSS = `
   margin: auto;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 370px) {
+  #roadmap_box {
+    max-width: 19em;
+  }
+  #phase_prototype {
+    width: 9.5em;
+  }
+  #phase_framework, #phase_multichain {
+    width: 19em;
+  }
+  .features_box {
+    max-width: 11em;
+    min-width: 9em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .65em;
+  }
+}
+
+@media screen and (min-width: 0px), @media screen and (min-width: 370px), @media screen and (min-width: 768px) {
   #roadmap_container {
     margin-top: 5em;
-    margin-left: 0;
   }
   #roadmap_box {
     justify-content: flex-start;
     align-content: flex-start;
-    max-width: 35em;
     flex-direction: column;
   }
   .phase_marker {
@@ -69,49 +87,22 @@ let CSS = `
 
   #shape_arrow {
     display: none;
+  }
+}
+@media screen and (min-width: 370px) {
+  #roadmap_box {
+    max-width: 22em;
   }
 }
 @media screen and (min-width: 768px) {
-  #roadmap_container {
-    margin-top: 5em;
-    margin-left: 7.5em;
-  }
   #roadmap_box {
-    justify-content: flex-start;
-    align-content: flex-start;
     max-width: 35em;
-    flex-direction: column;
-  }
-  .phase_marker {
-    flex-direction: row-reverse;
-    width: 100%;
-    height: 3em;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .marker_line {
-    border-left: none;
-    border-bottom: 4px dotted black;
-    height: 0;
-    width: 100%;
-    margin: auto;
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
-  #phase_prototype, #phase_framework, #phase_multichain {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  #shape_arrow {
-    display: none;
   }
 }
-@media screen and (min-width: 1080px) {
+
+@media screen and (min-width: 996px) {
   #roadmap_container {
     margin-top: 8em;
-    margin-left: 0;
   }
   #roadmap_box {
     justify-content: center;
@@ -160,27 +151,10 @@ let CSS = `
   flex-direction: column;
   padding-bottom: .25em;
 }
-#phase_prototype {
-  width: 13em;
-}
-#phase_framework, #phase_multichain {
-  width: 25em;
-}
 
 #roadmap_arrow {
   position: relative;
 }
-
-.features_container {
-  display:flex;
-  flex-wrap: nowrap;
-  margin: auto;
-}
-.features_box {
-  width: 12.5em;
-  margin: auto;
-}
-
 .title_present {
   background: #222222;
   color: #FFFFFF;
@@ -195,9 +169,49 @@ let CSS = `
   line-height: 2em;
   cursor: default;
 }
+
+.features_container {
+  display:flex;
+  flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 370px), @media screen and (min-width: 768px), @media screen and (min-width: 996px) {
+  #phase_prototype {
+    width: 11em;
+  }
+  #phase_framework, #phase_multichain {
+    width: 22em;
+  }
+  .features_box {
+    max-width: 12.5em;
+    min-width: 11em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .75em;
+  }
+} 
+@media screen and (min-width: 1200px) {
+  #phase_prototype {
+    width: 13em;
+  }
+  #phase_framework, #phase_multichain {
+    width: 26em;
+  }
+  .features_box {
+    min-width: 13em;
+    max-width: 14em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .9em;
+  }
+}
+
 .feature_complete, .feature_incomplete {
   width: 14em;
-  margin: .4em;
+  margin: auto;
+  margin-bottom: .5em;
   height: 1.8em;
 }
 .feature_complete {
@@ -212,6 +226,7 @@ let CSS = `
   border-radius: .3em;
   border: .1px grey solid;
 }
+
 `;
 
 function RoadmapSection() {
@@ -228,9 +243,9 @@ function RoadmapSection() {
               <p>Proof of Concept</p>
               <div className='features_container'>
                 <div className='features_box'>
-                  <button className='feature_complete'>🏦 Treasury Management</button>
-                  <button className='feature_complete'>🏵 Gov Token Creation</button>
-                  <button className='feature_incomplete'>🗳 Basic Voting</button>
+                  <div className='feature_complete'>🏦 Treasury Management</div>
+                  <div className='feature_complete'>🏵 Gov Token Creation</div>
+                  <div className='feature_incomplete'>🗳 Basic Voting</div>
                 </div>
               </div>
             </div>
@@ -246,14 +261,14 @@ function RoadmapSection() {
               <p>Team + Community Collaboration</p>
               <div className='features_container'>
                 <div className='features_box'>
-                  <button className='feature_incomplete'>✅ Simple Majority Vote</button>
-                  <button className='feature_incomplete'>🔒 Token Staking</button>
-                  <button className='feature_incomplete'>🎛 Token Distribution</button>
+                  <div className='feature_incomplete'>✅ Simple Majority Vote</div>
+                  <div className='feature_incomplete'>🔒 Token Staking</div>
+                  <div className='feature_incomplete'>🎛 Token Distribution</div>
                 </div>
                 <div className='features_box'>              
-                  <button className='feature_incomplete'>⛓ On-Chain Execution</button>
-                  <button className='feature_incomplete'>📥 Delegation</button>
-                  <button className='feature_incomplete'>🗽 Community Dashboard</button>
+                  <div className='feature_incomplete'>⛓ On-Chain Execution</div>
+                  <div className='feature_incomplete'>📥 Delegation</div>
+                  <div className='feature_incomplete'>🗽 Community Dashboard</div>
                 </div>
               </div>
             </div>
@@ -273,14 +288,14 @@ function RoadmapSection() {
               <p>Fully Decentralized Organization</p>
               <div className='features_container'>
                 <div className='features_box'>
-                  <button className='feature_incomplete'>📈 Token Launchpad</button>
-                  <button className='feature_incomplete'>🌉 Layer 2 Bridges</button>
-                  <button className='feature_incomplete'>🐸 Identity Integration</button>
+                  <div className='feature_incomplete'>📈 Token Launchpad</div>
+                  <div className='feature_incomplete'>🌉 Layer 2 Bridges</div>
+                  <div className='feature_incomplete'>🐸 Identity Integration</div>
                 </div>
                 <div className='features_box'>
-                  <button className='feature_incomplete'>🗣 Social Tools</button>
-                  <button className='feature_incomplete'>🔌 Custom DAO Integrations</button>
-                  <button className='feature_incomplete'>🏛 Voting Module Library</button>
+                  <div className='feature_incomplete'>🗣 Social Tools</div>
+                  <div className='feature_incomplete'>🔌 Custom DAO Integrations</div>
+                  <div className='feature_incomplete'>🏛 Voting Module Library</div>
                 </div>
               </div>
             </div>

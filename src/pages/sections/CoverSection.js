@@ -4,15 +4,24 @@ import styles from '../index.module.css';
 import clsx from 'clsx';
 
 let CSS = `
+@media screen and (max-width: 768px) {
+  .cover_caption {
+    left: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cover_caption {
+    left: 2em;
+  }
+}
 .section_cover {
   position: relative;
   overflow: hidden;
 }
 .cover_caption {
   position: absolute;
-  left: 4em;
-  bottom: 3em;
-  margin-right: 4em;
+  bottom: 1em;
+  margin-right: 2em;
 }
 .cover_title, .cover_subtitle {
   display: flex;
@@ -27,6 +36,7 @@ let CSS = `
 .cover_subtitle {
   font-size: 1.25em;
 }
+
 `;
 
 function CoverSection() {
