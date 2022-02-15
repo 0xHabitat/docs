@@ -236,7 +236,7 @@ function RoadmapSection() {
 
   return (
     <div className={styles.section_roadmap}>
-      <div id='roadmap_wrapper'>
+      <div id='roadmap_wrapper' data-aos="fade-up">
         <h1>🛣 v2 Roadmap</h1>
         <div id='roadmap_container'>
           <div id='roadmap_box'>
