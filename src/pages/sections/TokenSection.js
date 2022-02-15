@@ -5,45 +5,46 @@ import clsx from 'clsx';
 import Shape2 from '/img/shape-2.svg';
 import Coins from '/img/image-token-coins.svg';
 
-let CSS = `
-#token_wrapper {
-  display:block;
-  position: relative;
-  width:90%;
-  margin: auto;
-  z-index: 1;
-}
-#token_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-#token_content {
-  max-width: 38em;
-  min-width: 18em;
-  flex: 1 1 0;
-  margin: 1em;
-}
-#token_image {
-  min-width: 20em;
-  max-width: 30em;
-  min-height:10em;
-  flex: 1 1 1;
-}
-#token_img {
-  margin: auto;
-  display: block;
-  max-width: 13em;
-  min-width: 10em; 
-}
-`;
-
 function TokenSection() {
-  const {siteConfig} = useDocusaurusContext();
+
+  let CSS = /* css */ `
+  ${ /** TokenSection CSS */''}
+  #token_wrapper {
+    display:block;
+    position: relative;
+    width:90%;
+    margin: auto;
+    z-index: 1;
+  }
+  #token_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #token_content {
+    max-width: 38em;
+    min-width: 18em;
+    flex: 1 1 0;
+    margin: 1em;
+  }
+  #token_image {
+    min-width: 20em;
+    max-width: 30em;
+    min-height:10em;
+    flex: 1 1 1;
+  }
+  #token_img {
+    margin: auto;
+    display: block;
+    max-width: 13em;
+    min-width: 10em; 
+  }
+  `;
+
   return (
-    <div className={styles.section_token}>
+    <div className={styles.section_token} data-aos="fade-up" data-aos-delay="100">
       <Shape2 height='100%' width='100%' className={styles.shapes}/>
       <div id='token_wrapper'>
         <div id='token_container'>

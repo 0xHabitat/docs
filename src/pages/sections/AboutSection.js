@@ -5,40 +5,41 @@ import clsx from 'clsx';
 import Shape1 from '/img/shape-1.svg';
 import DAO from '/img/image-about-dao.svg';
 
-let CSS = `
-#about_wrapper {
-  display:block;
-  position: relative;
-  width:90%;
-  margin: auto;
-  z-index: 1;
-}
-#about_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-#about_content {
-  max-width: 40em;
-  min-width: 16em;
-  flex: 1 1 0;
-  margin-right: 2em;
-}
-#about_img {
-  margin: auto;
-  min-width: 20em;
-  max-width: 30em;
-  min-height:10em;
-  flex: 1 1 0;
-}
-`;
-
 export default function AboutSection() {
+  
+  let CSS = /* css */ `
+  ${ /** AboutSection CSS */''}
+  #about_wrapper {
+    display:block;
+    position: relative;
+    width:90%;
+    margin: auto;
+    z-index: 1;
+  }
+  #about_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #about_content {
+    max-width: 40em;
+    min-width: 16em;
+    flex: 1 1 0;
+    margin-right: 2em;
+  }
+  #about_img {
+    margin: auto;
+    min-width: 20em;
+    max-width: 30em;
+    min-height:10em;
+    flex: 1 1 0;
+  }
+  `;
 
   return (
-    <div className={styles.section_about}>
+    <div className={styles.section_about} data-aos="fade-up" data-aos-delay="100">
       <Shape1 height='100%' width='100%' className={styles.shapes}/>
       <div id='about_wrapper'>
         <div id='about_container'>

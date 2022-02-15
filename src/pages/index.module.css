@@ -18,7 +18,7 @@
   .landing {
     --height_about: 50em;
     --height_token: 65em;
-    --height_diamond: 50em;
+    --height_diamond: 35em;
     --height_roadmap: 45em;
     --height_info: 120em;
   }
@@ -27,7 +27,7 @@
   .landing {
     --height_about: 50em;
     --height_token: 55em;
-    --height_diamond: 30em;
+    --height_diamond: 35em;
     --height_roadmap: 50em;
     --height_info: 80em;
   }
@@ -36,7 +36,7 @@
   .landing {
     --height_about: 45em;
     --height_token: 38em;
-    --height_diamond: 30em; 
+    --height_diamond: 40em; 
     --height_roadmap: 50em;
     --height_info: 70em;
   }
@@ -45,7 +45,7 @@
   .landing {
     --height_about: 40em; 
     --height_token: 35em;
-    --height_diamond: 30em;
+    --height_diamond: 50em;
     --height_roadmap: 30em;
     --height_info: 50em;
   }
@@ -54,7 +54,7 @@
   .landing {
     --height_about: 50em;
     --height_token: 45em;
-    --height_diamond: 30em;
+    --height_diamond: 65em;
     --height_roadmap: 30em;
     --height_info: 60em;
   }
@@ -63,7 +63,7 @@
   .landing {
     --height_about: 70em;
     --height_token: 50em;
-    --height_diamond: 30em;
+    --height_diamond: 65em;
     --height_roadmap: 30em;
     --height_info: 80em;
   }
@@ -72,7 +72,7 @@
   .landing {
     --height_about: 80em;
     --height_token: 60em;
-    --height_diamond: 30em;
+    --height_diamond: 65em;
     --height_roadmap: 30em;
     --height_info: 100em;
   }
