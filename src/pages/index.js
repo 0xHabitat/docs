@@ -42,8 +42,8 @@ export default function Home() {
   }
   `;
 
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  // const context = useDocusaurusContext();
+  // const { siteConfig = {} } = context;
 
   useEffect(() => {
       if (ExecutionEnvironment.canUseDOM) {
@@ -51,35 +51,6 @@ export default function Home() {
           // updateDarkModeClass();
       }
   }, [ExecutionEnvironment.canUseDOM]);
-
-  // function updateDarkModeClass() {
-  //     if (!document) return;
-  //     if (document.documentElement?.dataset?.theme === "dark" && !document.documentElement.classList.contains("dark")) {
-  //         document.documentElement.classList.add("dark");
-  //     } else {
-  //         document.documentElement.classList.remove("dark");
-  //     }
-  // }
-
-  // useEffect(() => {
-  //     if (!ExecutionEnvironment.canUseDOM) return;
-  //     const observer = new MutationObserver((mutations) => {
-  //         mutations.forEach(function(mutation) {
-  //             if (mutation.type == "attributes"
-  //                 && mutation.attributeName === "data-theme") {
-  //                 updateDarkModeClass();
-  //             }
-  //         });
-  //     });
-  //     observer.observe(document.documentElement, {
-  //         attributes: true,
-  //         childList: false,
-  //         subtree: false
-  //     });
-  //     return () => {
-  //         observer.disconnect();
-  //     };
-  // }, [ExecutionEnvironment.canUseDOM]);
   
   return (
     <Layout

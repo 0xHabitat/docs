@@ -3,8 +3,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from '../index.module.css';
 import clsx from 'clsx';
 import Lottie from 'lottie-web';
-
-const diamondAnimationStart = React.lazy(() => import("/img/diamond-start.json"));
+// import * as start from '/img/diamond-start.json';
+// import * as loop from '/img/diamond-loop.json';
 
 
 function DiamondSection() {
@@ -18,7 +18,7 @@ function DiamondSection() {
     width: 90%;
     min-height: 40em;
   }
-  ${ /** Working with Diamonds */''}
+  ${ /** Working with Diamonds text */''}
   #diamond_content {
     position: absolute;
     right: 0;
@@ -87,8 +87,8 @@ function DiamondSection() {
     border-bottom: 2em solid #fff;
     transform:rotate(20deg);
   }
+  ${ /** Animation container */''}
   .diamond_animation {
-
     margin: auto;
     min-width: 30em;
     max-widht: 60em;
@@ -97,7 +97,7 @@ function DiamondSection() {
 
   const animationContainer = useRef(null)
   
-  const [animation, setAnimation] = useState(['loop'])
+  const [animation, setAnimation] = useState(['start'])
 
   async function animate(file) {
     console.log('playing animation', file)
@@ -108,7 +108,7 @@ function DiamondSection() {
       loop = true;
     }
     // https://airbnb.io/lottie/#/web?id=other-loading-options
-    let start = Lottie.loadAnimation({
+    let anim = Lottie.loadAnimation({
       container: animationContainer.current,
       renderer: 'svg',
       loop: loop,
@@ -119,8 +119,10 @@ function DiamondSection() {
         progressiveLoad: true,
       }
     })
-    start.addEventListener('complete', () => {
-      start.destroy();
+    anim.addEventListener('complete', () => {
+        console.log('completed animation', file)
+        anim.destroy()
+        setAnimation(['loop'])
     })
   }
 
