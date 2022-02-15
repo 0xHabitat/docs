@@ -18,6 +18,7 @@ export default function InfoSection() {
     margin: auto;
     z-index: 1;
   }
+  ${ /** Featured Tech */''}
   #info_container {
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +42,7 @@ export default function InfoSection() {
     padding: .5em;
     text-align: center;
   }
+  ${ /** Social Buttons */''}
   #buttons {
     padding: 2em;
     display: flex;
