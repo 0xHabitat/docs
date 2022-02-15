@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Habitat',
   tagline: 'Start your organization on Optimism',
-  url: 'https://habitat.hns.is/',
+  url: 'https://habitat/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

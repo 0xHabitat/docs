@@ -107,6 +107,7 @@ function DiamondSection() {
     } else {
       loop = true;
     }
+    // https://airbnb.io/lottie/#/web?id=other-loading-options
     let start = Lottie.loadAnimation({
       container: animationContainer.current,
       renderer: 'svg',
@@ -114,7 +115,8 @@ function DiamondSection() {
       autoplay: true,
       animationData: require(`/img/diamond-${file}.json`),
       rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice'
+        preserveAspectRatio: 'xMidYMid slice',
+        progressiveLoad: true,
       }
     })
     start.addEventListener('complete', () => {
