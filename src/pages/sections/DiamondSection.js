@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from '../index.module.css';
 import clsx from 'clsx';
@@ -24,6 +24,7 @@ function DiamondSection() {
     right: 0;
     text-align: right;
     width: 26em;
+    height: 100%;
   }
   ${ /** Legend */''}
   #diamond_legend {
@@ -88,47 +89,61 @@ function DiamondSection() {
     transform:rotate(20deg);
   }
   ${ /** Animation container */''}
-  .diamond_animation {
+  #diamond_animation {
     margin: auto;
     min-width: 30em;
     max-widht: 60em;
   }
   `;
 
-  const animationContainer = useRef(null)
-  
-  const [animation, setAnimation] = useState(['start'])
+  let anim;
+  const [animation, showAnimation] = useState(false);
+  const el = useRef(null);
 
-  async function animate(file) {
-    console.log('playing animation', file)
-    let loop;
-    if (file == 'start') {
-      loop = false;
-    } else {
-      loop = true;
+  useLayoutEffect(() => {
+    const topPos = element => element.getBoundingClientRect().top;
+    const div1Pos = topPos(el.current) - 420;
+    console.log(div1Pos)
+
+    function onScroll() {
+      const scrollPos = window.scrollY + window.innerHeight;
+      if (div1Pos < scrollPos) {
+        showAnimation(true);
+      }
+      if (div1Pos > scrollPos) {
+        showAnimation(false);
+      }
     }
-    // https://airbnb.io/lottie/#/web?id=other-loading-options
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  
+
+  useEffect(() => {
     let anim = Lottie.loadAnimation({
-      container: animationContainer.current,
+      container: el.current,
       renderer: 'svg',
-      loop: loop,
-      autoplay: true,
-      animationData: require(`/img/diamond-${file}.json`),
+      loop: false,
+      autoplay: false,
+      path: '/img/diamond-animation.json',
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice',
         progressiveLoad: true,
       }
     })
-    anim.addEventListener('complete', () => {
-        console.log('completed animation', file)
-        anim.destroy()
-        setAnimation(['loop'])
-    })
-  }
-
-  useEffect(() => {
-    // animate('start');
-    animate(animation)
+    
+    if (animation == true) {
+      anim.addEventListener('DOMLoaded', function(e) {
+        anim.playSegments([0, 101], true); 
+        anim.addEventListener('complete', () => {
+          anim.playSegments([101, 271], true);
+          //TODO remove eventlistener but continue loop
+        });
+      });
+    } else if (animation == false) {
+      anim.destroy();
+    }
   }, [animation])
 
   return (
@@ -138,7 +153,7 @@ function DiamondSection() {
           <h2>💎 Working with Diamonds</h2>
           <p>Habitat is building with EIP-2535 “Diamond Standard”. This standard allows organisations to use already existing features (contracts/facets) and easily share new. DAO facets are developed by Habitat and the DAO communities on Ethereum.</p>
         </div>
-        <div id='diamond_legend'>
+        <div id='diamond_legend' /* data-aos="flip-up" */>
           <div id='legend_dao'>
             <div id='dao_square'>
               <div id='square_shape'></div>
@@ -156,7 +171,7 @@ function DiamondSection() {
             </div>
           </div>
         </div>
-        <div className='diamond_animation' ref={animationContainer}></div>
+        <div id='diamond_animation' ref={el}></div>
       </div>
       <style>{CSS}</style>
     </div>

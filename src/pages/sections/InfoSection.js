@@ -100,7 +100,7 @@ export default function InfoSection() {
           <div className='info_feature'>
             <img className='info_img' src='/img/image-info-optimism.png'/>
             <h4>Scaling on an Optimistic Rollup</h4>
-            <p>Saves up to 96% transaction costs at PayPal-like speed. <a href='https://www.optimism.io/'>Read more</a>.</p>
+            <p>Saves up to 96% transaction costs at PayPal-like speed. <a href='https://l2fees.info/'>Read more</a>.</p>
           </div>
           <div className='info_feature'>
             <Habitat className={clsx('info_img', styles.svg_img)}/>

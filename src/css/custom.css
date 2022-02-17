@@ -25,6 +25,15 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #948fff;
   --ifm-color-primary-lightest: #c6c3ff;
 }
+/* html[data-theme='dark'] {
+  --ifm-color-primary: #4de9f5;
+  --ifm-color-primary-dark: #2fe5f3;
+  --ifm-color-primary-darker: #1fe3f2;
+  --ifm-color-primary-darkest: #0cc7d5;
+  --ifm-color-primary-light: #6bedf7;
+  --ifm-color-primary-lighter: #7beff8;
+  --ifm-color-primary-lightest: #a8f4fa;
+} */
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
