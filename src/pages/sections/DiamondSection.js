@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from '../index.module.css';
-import clsx from 'clsx';
 import Lottie from 'lottie-web';
 import './DiamondSection.css'
 

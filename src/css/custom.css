@@ -205,13 +205,8 @@ div[class*="toggleTrackThumb"] {
 }
 html[data-theme=dark] .background_animation {
   background: rgb(0, 4, 255);
-  /* background-image: linear-gradient(45deg, rgb(12, 159, 147), 10%, rgba(0,4,255)); */
-  /* background-blend-mode:darken; */
   opacity: .5;
 }
-/* .background {
-  background: linear-gradient(to left, rgb(175, 178, 238), aquamarine);
-} */
 
 
 
