@@ -160,11 +160,11 @@ div[class*="toggleTrack_"] {
 }
 
 div[class*="toggleTrackThumb"] {
-  background: url('/img/emoji-sunrise-over-mountains.png') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/emoji-national-park.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306396939') no-repeat;
   background-size: contain;
 }
 [data-theme='dark'] div[class*="toggleTrackThumb"] {
-  background: url('/img/emoji-national-park.png') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/emoji-sunrise-over-mountains.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306385939') no-repeat;
   background-size: contain;
 }
 
@@ -218,13 +218,13 @@ html[data-theme=dark] .background_animation {
 
 
 .cover_container {
-  background: url('/img/banner-day.png') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/cover-day.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306375122') no-repeat;
   background-size: cover;
   background-position: center;
   height:100vh;
 }
 [data-theme='dark'] .cover_container {
-  background: url('/img/banner-night.png') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/cover-night.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306366447') no-repeat;
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -255,3 +255,4 @@ html[data-theme=dark] .background_animation {
 .footer {
   padding:0;
 }
+

@@ -16,7 +16,7 @@ const config = {
   organizationName: '0xHabitat', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
-  /**@dev SEARCHBAR DEPRECATED */
+  /** SEARCHBAR DEPRECATED */
   // plugins: [
   //   [
   //     require.resolve("@cmfcmf/docusaurus-search-local"),
@@ -26,6 +26,18 @@ const config = {
   //       indexPages: false,
   //       language: "en",
   //       style: undefined,
+  //     },
+  //   ],
+  // ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-ideal-image',
+  //     {
+  //       // quality: 70,
+  //       // max: 1030, // max resized image's size.
+  //       // min: 640, // min resized image's size. if original is lower, use that size.
+  //       // steps: 2, // the max number of images generated between min and max (inclusive)
+  //       disableInDev: false,
   //     },
   //   ],
   // ],

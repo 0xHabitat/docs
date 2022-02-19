@@ -1,47 +1,10 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from '../index.module.css';
-import clsx from 'clsx';
 import Shape2 from '/img/shape-2.svg';
 import Coins from '/img/image-token-coins.svg';
+import './TokenSection.css'
 
 function TokenSection() {
-
-  let CSS = /* css */ `
-  ${ /** TokenSection CSS */''}
-  #token_wrapper {
-    display:block;
-    position: relative;
-    width:90%;
-    margin: auto;
-    z-index: 1;
-  }
-  #token_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-  }
-  #token_content {
-    max-width: 38em;
-    min-width: 18em;
-    flex: 1 1 0;
-    margin: 1em;
-  }
-  #token_image {
-    min-width: 20em;
-    max-width: 30em;
-    min-height:10em;
-    flex: 1 1 1;
-  }
-  #token_img {
-    margin: auto;
-    display: block;
-    max-width: 13em;
-    min-width: 10em; 
-  }
-  `;
 
   return (
     <div className={styles.section_token} data-aos="fade-up" data-aos-delay="100">
@@ -62,7 +25,6 @@ function TokenSection() {
 
         </div>
       </div>
-      <style>{CSS}</style>
     </div>
   );
 }

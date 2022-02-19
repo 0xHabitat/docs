@@ -2,11 +2,6 @@
 import React from "react";
 import styles from '../index.module.css';
 
-let CSS = `
-${ /** Background component CSS */''}
-
-`;
-
 const MAX_LIGHTNESS = 10;
 const MIN_LIGHTNESS = 80;
 const SATURATION = 100;
@@ -60,7 +55,6 @@ class Background extends React.Component {
         <div className={styles.background_wrapper}>
           <canvas width='12' height='12' className='background_animation' ref={this.canvasRef} />
         </div>
-        <style>{CSS}</style>
       </div>
     )
   }
