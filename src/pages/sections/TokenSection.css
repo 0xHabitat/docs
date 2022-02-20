@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: .5em;
 }
 #token_content {
   max-width: 38em;

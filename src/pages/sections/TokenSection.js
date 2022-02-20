@@ -3,12 +3,13 @@ import styles from '../index.module.css';
 import Shape2 from '/img/shape-2.svg';
 import Coins from '/img/image-token-coins.svg';
 import './TokenSection.css'
+import useCurrentWidth from '../components/Shapes';
 
 function TokenSection() {
 
   return (
     <div className={styles.section_token} data-aos="fade-up" data-aos-delay="100">
-      <Shape2 height='100%' width='100%' className={styles.shapes}/>
+      <Shape2 height='100%' width='100%' className={styles.shapes} preserveAspectRatio={useCurrentWidth()}/>
       <div id='token_wrapper'>
         <div id='token_container'>
           <div id='token_content'>

@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../index.module.css';
 import clsx from 'clsx';
 import Shape1 from '/img/shape-1.svg';
 import DAO from '/img/image-about-dao.svg';
 import './AboutSection.css'
+import useCurrentWidth from '../components/Shapes';
 
 export default function AboutSection() {
 
+
   return (
     <div className={styles.section_about} data-aos="fade-up" data-aos-delay="100">
-      <Shape1 height='100%' width='100%' className={styles.shapes}/>
+      <Shape1 height='100%' width='100%' className={styles.shapes} preserveAspectRatio={useCurrentWidth()}/>
       <div id='about_wrapper'>
         <div id='about_container'>
           <div id='about_content'>

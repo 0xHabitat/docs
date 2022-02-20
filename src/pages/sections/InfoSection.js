@@ -7,26 +7,27 @@ import Habitat from '/img/image-info-habitat.svg';
 import Optimism from '/img/image-info-optimism.svg';
 import Link from '@docusaurus/Link';
 import './InfoSection.css'
+import useCurrentWidth from '../components/Shapes';
 
 export default function InfoSection() {
 
   return (
     <div className={styles.section_info} data-aos="fade-up" data-aos-delay="100">
-      <Shape3 height='100%' width='100%' className={styles.shapes}/>
+      <Shape3 height='100%' width='100%' className={styles.shapes} preserveAspectRatio={useCurrentWidth()}/>
       <div id='info_wrapper'>
         <div id='info_container'>
           <div className='info_feature'>
-            <Optimism className={clsx('info_img', styles.svg_img)}/>
+            <Optimism className={clsx('info_img', styles.svg_img)} height={100} width={100}/>
             <h4>Scaling on an Optimistic Rollup</h4>
             <p>Saves up to 96% transaction costs at PayPal-like speed. <a href='https://l2fees.info/'>Read more</a>.</p>
           </div>
           <div className='info_feature'>
-            <Habitat className={clsx('info_img', styles.svg_img)}/>
+            <Habitat className={clsx('info_img', styles.svg_img)} height={100} width={100}/>
             <h4>Owned and Governed by You.</h4>
             <p>Grow the Habitat by signaling new tools and vote on new features.</p>
           </div>
           <div className='info_feature'>
-            <Distributed className={clsx('info_img', styles.svg_img)}/>
+            <Distributed className={clsx('info_img', styles.svg_img)} height={100} width={100}/>
             <h4>Independent and Autonomous</h4>
             <p>Communities on Habitat stay sovereign. Your community, your rules.</p>
           </div>
