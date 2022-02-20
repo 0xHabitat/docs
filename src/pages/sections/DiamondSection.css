@@ -1,26 +1,4 @@
-#diamond_container {
-  margin: auto;
-  display: flex;
-  position:relative;
-  width: 90%;
-  min-height: 40em;
-}
-/* Working with Diamonds text */
-#diamond_content {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  width: 26em;
-  height: 100%;
-}
-/* Legend */
-#diamond_legend {
-  position: absolute;
-  bottom: 0;
-  text-align: left;
-  margin-left: 2em;
-  margin-bottom: 1em;
-}
+
 #legend_dao {
   margin: 1em;
   display: flex;
@@ -83,9 +61,76 @@
     min-width: 30em;
     max-width: 60em;
   }
+  #diamond_image {
+    display: none;
+  }
+  #diamond_container {
+    margin: auto;
+    display: flex;
+    position:relative;
+    width: 90%;
+    min-height: 40em;
+  }
+  /* Working with Diamonds text */
+  #diamond_content {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    max-width: 26em;
+    min-width: 17em;
+    height: 100%;
+  }
+  /* Legend */
+  #diamond_legend {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
 }
 @media screen and (max-width: 600px) {
   #diamond_animation {
     display: none;
+  }
+  #diamond_image {
+    margin: auto;
+    width: 100%;
+    max-height: 50em;
+    min-height: 20em;
+    display: block;
+    flex: 1 1 1;
+
+  }
+  .diamond_img {
+    width: 100%;
+    max-width: 25em;
+    margin: auto;
+    height: 100%;
+    display: block;
+  }
+  #diamond_container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    width: 90%;
+    min-height: 40em;
+  }
+  /* Working with Diamonds text */
+  #diamond_content {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    max-width: 26em;
+    min-width: 17em;
+    height: 100%;
+  }
+  /* Legend */
+  #diamond_legend {
+    position: relative;
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: 1em;
   }
 }

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import styles from '../index.module.css';
 import Lottie from 'lottie-web';
-import './DiamondSection.css'
+import './DiamondSection.css';
+import DiamondImage from '/img/diamond-image.svg'
 
 
 function DiamondSection() {
@@ -61,6 +62,10 @@ function DiamondSection() {
           <h2>💎 Working with Diamonds</h2>
           <p>Habitat is building with EIP-2535 “Diamond Standard”. This standard allows organisations to use already existing features (contracts/facets) and easily share new. DAO facets are developed by Habitat and the DAO communities on Ethereum.</p>
         </div>
+        <div id='diamond_animation' ref={el}></div>
+        <div id='diamond_image'>
+          <DiamondImage className='diamond_img' /* data-aos="flip-up" *//>
+        </div>
         <div id='diamond_legend' /* data-aos="flip-up" */>
           <div id='legend_dao'>
             <div id='dao_square'>
@@ -79,8 +84,6 @@ function DiamondSection() {
             </div>
           </div>
         </div>
-        <div id='diamond_animation' ref={el}></div>
-        <div id='diamond_image'></div>
       </div>
     </div>
   );

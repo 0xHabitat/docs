@@ -160,11 +160,11 @@ div[class*="toggleTrack_"] {
 }
 
 div[class*="toggleTrackThumb"] {
-  background: url('https://ik.imagekit.io/habitat/emoji-national-park.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306396939') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/emoji-sunrise-over-mountains.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306385939') no-repeat;
   background-size: contain;
 }
 [data-theme='dark'] div[class*="toggleTrackThumb"] {
-  background: url('https://ik.imagekit.io/habitat/emoji-sunrise-over-mountains.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306385939') no-repeat;
+  background: url('https://ik.imagekit.io/habitat/emoji-national-park.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645306396939') no-repeat;
   background-size: contain;
 }
 
