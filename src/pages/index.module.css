@@ -9,7 +9,7 @@
   .landing {
     --height_about: 60em;
     --height_token: 70em;
-    --height_diamond: 47em;
+    --height_diamond: 38em;
     --height_roadmap: 40em;
     --height_info: 120em;
   }
@@ -18,7 +18,7 @@
   .landing {
     --height_about: 55em;
     --height_token: 66em;
-    --height_diamond: 52em;
+    --height_diamond: 42em;
     --height_roadmap: 40em;
     --height_info: 112em;
   }

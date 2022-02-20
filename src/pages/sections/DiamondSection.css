@@ -92,6 +92,7 @@
   #diamond_legend {
     position: absolute;
     bottom: 0;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 600px) {
@@ -121,5 +122,15 @@
   /* Legend */
   #diamond_legend {
     position: relative;
+    margin-top: -6em;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 370px) {
+  /* Legend */
+  #diamond_legend {
+    position: relative;
+    margin-top: -5em;
+    font-size: x-small;
   }
 }
