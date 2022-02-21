@@ -41,14 +41,14 @@ function DiamondSection() {
         hideOnTransparent: true
       }
     })
+    const loop = () => {
+      anim.playSegments([101, 271], true);
+    }
     
     if (animation == true) {
       anim.addEventListener('DOMLoaded', function(e) {
         anim.playSegments([0, 101], true); 
-        anim.addEventListener('complete', () => {
-          anim.playSegments([101, 271], true);
-          //TODO remove eventlistener but continue loop
-        });
+        anim.addEventListener('complete', loop);
       });
     } else if (animation == false) {
       anim.destroy();
