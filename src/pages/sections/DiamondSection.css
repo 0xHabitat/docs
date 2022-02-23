@@ -134,3 +134,8 @@
     font-size: x-small;
   }
 }
+@media screen and (min-width: 1500px) {
+  #diamond_container {
+    max-width: 100em !important;
+  }
+}

@@ -30,17 +30,21 @@ function DiamondSection() {
   
 
   useEffect(() => {
-    let anim = Lottie.loadAnimation({
-      container: el.current,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: '/img/diamond-animation.json',
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-        hideOnTransparent: true
-      }
-    })
+    let anim;
+    if (!anim) {
+      anim = Lottie.loadAnimation({
+        container: el.current,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '/img/diamond-animation.json',
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice',
+          hideOnTransparent: true
+        }
+      })
+    }
+    anim.setSpeed(1.1)
     const loop = () => {
       anim.playSegments([101, 271], true);
     }

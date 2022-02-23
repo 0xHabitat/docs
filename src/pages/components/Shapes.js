@@ -33,7 +33,7 @@ export default function useCurrentWidth() {
   }, [])
 
   let scaleMode;
-  if (width > 996) {
+  if (width > 995.99) {
     scaleMode = "none"
   } else if (width < 996) {
     scaleMode = "xMidYMid slice"

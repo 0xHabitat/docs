@@ -16,31 +16,7 @@ const config = {
   organizationName: '0xHabitat', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
-  /** SEARCHBAR DEPRECATED */
-  // plugins: [
-  //   [
-  //     require.resolve("@cmfcmf/docusaurus-search-local"),
-  //     {
-  //       indexDocs: true,
-  //       indexBlog: false,
-  //       indexPages: false,
-  //       language: "en",
-  //       style: undefined,
-  //     },
-  //   ],
-  // ],
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-ideal-image',
-  //     {
-  //       // quality: 70,
-  //       // max: 1030, // max resized image's size.
-  //       // min: 640, // min resized image's size. if original is lower, use that size.
-  //       // steps: 2, // the max number of images generated between min and max (inclusive)
-  //       disableInDev: false,
-  //     },
-  //   ],
-  // ],
+  // TODO: Integrate Algolia search - https://docusaurus.io/docs/search
 
   presets: [
     [
@@ -68,6 +44,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{
+        name: 'habitat, 0xhabitat, crypto, blockchain, dao, daos, communities, governance, govern, voting, vote, votes, ethereum, eth, optimism, rollup, diamond, diamonds, diamond standard, modules, library, facets, facet, code, solidity, contract, contracts, smart contracts, smart contract, evm, nft, token, tokens, economics', 
+        content: 'docs, documentation, documents, homepage, home, index, community, main, mainpage, blog, discord, github, twitter, blog, substack, sourcecode, code, roadmap, info'}],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -103,7 +82,7 @@ const config = {
             className: 'navbar_item',
           },
           { 
-            to: 'blog', 
+            to: 'https://0xhabitat.substack.com/', 
             label: 'Blog', 
             position: 'left',
             className: 'navbar_item',

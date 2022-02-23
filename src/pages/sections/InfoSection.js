@@ -37,7 +37,7 @@ export default function InfoSection() {
           <Link id='button_twitter' className='button' to='https://twitter.com/0xhabitat'>🐦 Twitter</Link>
           <Link id='button_discord' className='button' to='https://discord.com/invite/Pqdj73UTt6'>💬 Discord</Link>
           <Link id='button_github' className='button' to='https://github.com/0xHabitat'>🔧 Github</Link>
-          <Link id='button_blog' className='button' to='/blog'>📒 Blog</Link>
+          <Link id='button_blog' className='button' to='https://0xhabitat.substack.com/'>📒 Blog</Link>
           <Link id='button_docs' className='button' to='/docs'>🔎 Docs</Link>
         </div>
       </div>

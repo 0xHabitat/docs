@@ -22,7 +22,9 @@ export default function AboutSection() {
               <p>Start your community on Habitat and enjoy the scaling benefits of optimistic rollups on Ethereum. Rollups can extend the DAO space by enabling more organisation features and trustless execution of voting results. New modules and features are built and maintained by the Habitat DAO and its contributors making them free to use for every community.</p>
             </div>
           </div>
-          <DAO className={clsx('about_img', styles.svg_img)}/>
+          <div id='about_image'>
+            <DAO className={clsx('about_img', styles.svg_img)}/>
+          </div>
         </div>
       </div>
     </div>
