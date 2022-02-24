@@ -1,0 +1,19 @@
+.loader {
+  width: 100%;
+  opacity: 0.3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sliding {
+  margin: auto;
+  font-size: xx-large;
+  animation: 69s loader linear forwards;
+    transform:translateX(-100%);
+}
+
+@keyframes loader {
+  to {
+    transform:translateX(0);
+  }
+}
