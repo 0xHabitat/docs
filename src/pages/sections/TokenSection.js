@@ -4,6 +4,7 @@ import Shape2 from '/img/shape-2.svg';
 import Coins from '/img/image-token-coins.svg';
 import './TokenSection.css'
 import useCurrentWidth from '../components/Shapes';
+import Link from '@docusaurus/Link';
 
 function TokenSection() {
 
@@ -17,7 +18,12 @@ function TokenSection() {
               <h2>🌱 HABITAT Token</h2>
             </div>
             <div id='token_text'>
-              <p>The HABITAT Token is the governance token guiding the HABITAT DAO. HABITAT is used to participate in decisions about new features, upgrades and updates within the Habitat Ecosystem. New sophisticated voting modules can be proposed, voted on and implemented. Together with you and the communities on Habitat, we build an open-source, all-in-one community toolkit on Ethereum.</p>
+              <p>Community ownership is the key benefit of the HABITAT Token.</p>
+              <p>Making collective decisions about new features and upgrades for the Habitat dapp. Adding and funding new diamond facets (contracts) such as voting modules, DeFi, treasury management, NFT and many more.</p>
+              <p>Together with you and the communities on Habitat, we build an open-source, all-in-one community toolkit on Ethereum.</p>
+              <div id='token_button'>
+                <Link id='button_waitlist' className='button' to='https://0xhabitat.substack.com/'>Join Waitlist</Link>
+              </div>
             </div>
           </div>
           <div id='token_image'>

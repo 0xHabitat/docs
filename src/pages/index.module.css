@@ -8,7 +8,7 @@
 @media screen and (max-width: 370px) {
   .landing {
     --height_about: 60em;
-    --height_token: 70em;
+    --height_token: 80em;
     --height_diamond: 38em;
     --height_roadmap: 40em;
     --height_info: 120em;
@@ -17,7 +17,7 @@
 @media screen and (min-width: 370px) {
   .landing {
     --height_about: 55em;
-    --height_token: 66em;
+    --height_token: 75em;
     --height_diamond: 42em;
     --height_roadmap: 40em;
     --height_info: 112em;
@@ -26,7 +26,7 @@
 @media screen and (min-width: 600px) {
   .landing {
     --height_about: 50em;
-    --height_token: 55em;
+    --height_token: 65em;
     --height_diamond: 35em;
     --height_roadmap: 45em;
     --height_info: 80em;
@@ -35,7 +35,7 @@
 @media screen and (min-width: 768px) {
   .landing {
     --height_about: 45em;
-    --height_token: 38em;
+    --height_token: 48em;
     --height_diamond: 40em; 
     --height_roadmap: 46em;
     --height_info: 55em;
@@ -44,7 +44,7 @@
 @media screen and (min-width: 996px) {
   .landing {
     --height_about: 38em; 
-    --height_token: 35em;
+    --height_token: 40em;
     --height_diamond: 45em;
     --height_roadmap: 30em;
     --height_info: 55em;
@@ -53,7 +53,7 @@
 @media screen and (min-width: 1200px) {
   .landing {
     --height_about: 38em;
-    --height_token: 35em;
+    --height_token: 38em;
     --height_diamond: 45em;
     --height_roadmap: 30em;
     --height_info: 55em;
@@ -62,7 +62,7 @@
 @media screen and (min-width: 1500px) {
   .landing {
     --height_about: 42em;
-    --height_token: 35em;
+    --height_token: 44em;
     --height_diamond: 45em;
     --height_roadmap: 30em;
     --height_info: 57em;
@@ -86,7 +86,7 @@
 @media screen and (min-width: 2000px) {
   .landing {
     --height_about: 44em;
-    --height_token: 35em;
+    --height_token: 50em;
     --height_diamond: 48em;
     --height_roadmap: 30em;
     --height_info: 62em;
@@ -157,10 +157,6 @@ html[data-theme=dark] .svg_img {
   --svg_fill: white;
   --svg_stroke: black;
   --invert_amount: 100%;
-}
-
-a {
-
 }
 
 
