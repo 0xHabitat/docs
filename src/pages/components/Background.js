@@ -53,7 +53,7 @@ class Background extends React.Component {
     return (
       <div>
         <div className={styles.background_wrapper}>
-          <canvas width='12' height='12' className='background_animation' ref={this.canvasRef} />
+          <canvas width='8' height='12' className='background_animation' ref={this.canvasRef} />
         </div>
       </div>
     )
