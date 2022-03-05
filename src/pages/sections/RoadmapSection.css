@@ -1,0 +1,334 @@
+#roadmap_wrapper {
+  display:block;
+  position: relative;
+  width:95%;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+}
+/* Constants */
+#roadmap_box {
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+.phase_marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.marker_title {
+  width: 4em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marker_title h3 {
+  margin: auto;
+}
+
+
+@media screen and (max-width: 370px) {
+  #roadmap_box {
+    max-width: 19em;
+  }
+  #phase_prototype {
+    width: 9.5em;
+  }
+  #phase_framework, #phase_multichain {
+    width: 19em;
+  }
+  .features_box {
+    max-width: 11em;
+    min-width: 9em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .65em;
+  }
+}
+@media screen and (min-width: 0px) {
+  #roadmap_container {
+    margin-top: 5em;
+  }
+  #roadmap_box {
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+  }
+  .phase_marker {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 3em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .marker_line {
+    border-left: none;
+    border-bottom: 4px dotted black;
+    height: 0;
+    width: 100%;
+    margin: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  #phase_prototype, #phase_framework, #phase_multichain {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  #shape_arrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 370px) {
+  #roadmap_container {
+    margin-top: 5em;
+  }
+  #roadmap_box {
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    max-width: 22em;
+  }
+  .phase_marker {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 3em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .marker_line {
+    border-left: none;
+    border-bottom: 4px dotted black;
+    height: 0;
+    width: 100%;
+    margin: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  #shape_arrow {
+    display: none;
+  }
+  #phase_prototype {
+    width: 11em;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #phase_framework, #phase_multichain {
+    width: 22em;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .features_box {
+    max-width: 12.5em;
+    min-width: 11em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .75em;
+  }
+}
+@media screen and (min-width: 768px) {
+  #roadmap_container {
+    margin-top: 5em;
+  }
+  #roadmap_box {
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    max-width: 35em;
+  }
+  .phase_marker {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 3em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .marker_line {
+    border-left: none;
+    border-bottom: 4px dotted black;
+    height: 0;
+    width: 100%;
+    margin: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  #shape_arrow {
+    display: none;
+  }
+  #phase_prototype {
+    width: 11em;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #phase_framework, #phase_multichain {
+    width: 22em;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .features_box {
+    max-width: 12.5em;
+    min-width: 11em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .75em;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  #roadmap_container {
+    margin-top: 8em;
+  }
+  #roadmap_box {
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+    flex-direction: row;
+  }
+  .phase_marker {
+    flex-direction: column;
+    width: 4em;
+    height: 10em;
+    margin-top: -5.5em;
+    margin-left: -1.25em;
+    margin-right: -1.25em;
+  }
+  .marker_line {
+    border-left: 4px dotted black;
+    border-bottom: none;
+    height: 6em;
+    width: 0;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #shape_arrow {
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 1.4em solid transparent;
+    border-bottom: 1.4em solid transparent;
+    border-left: 1.75em solid white;
+    position:absolute;
+    right:0;
+    top: 0;
+    margin-right: -1.25em;
+    margin-top: -.4em;
+  }
+  #phase_prototype {
+    width: 11em;
+    background: none;
+  }
+  #phase_framework, #phase_multichain {
+    width: 22em;
+    background: none;
+  }
+  .features_box {
+    max-width: 12.5em;
+    min-width: 11em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .75em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #phase_prototype {
+    width: 13em;
+  }
+  #phase_framework, #phase_multichain {
+    width: 26em;
+  }
+  .features_box {
+    min-width: 13em;
+    max-width: 14em;
+    margin: auto;
+  }
+  .feature_complete, .feature_incomplete {
+    font-size: .9em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #shape_arrow {
+    border-top: 1.625em solid transparent !important;
+    border-bottom: 1.625em solid transparent !important;
+    border-left: 1.75em solid white !important;
+    margin-right: -1.5em;
+    margin-top: -.4em;
+  }
+  #phase_prototype {
+    width: 14em !important;
+  }
+  #phase_framework, #phase_multichain {
+    width: 28em !important;
+  }
+}
+@media screen and (min-width: 2000px) {
+  #shape_arrow {
+    border-top: 2em solid transparent !important;
+    border-bottom: 2em solid transparent !important;
+    border-left: 2.25em solid white !important;
+    margin-right: -1.75em;
+    margin-top: -.4em;
+  }
+  #phase_prototype {
+    width: 16em !important;
+  }
+  #phase_framework, #phase_multichain {
+    width: 32em !important;
+  }
+}
+
+
+/* Constants */
+#phase_prototype, #phase_framework, #phase_multichain {
+  border-radius: .4em;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: .25em;
+}
+#roadmap_arrow {
+  position: relative;
+}
+.title_present {
+  background: #222222;
+  color: #FFFFFF;
+  height: 2em;
+  line-height: 2em;
+  cursor: default;
+}
+.title_future {
+  background: #FFFFFF;
+  color: #000000;
+  height: 2em;
+  line-height: 2em;
+  cursor: default;
+}
+.features_container {
+  display:flex;
+  flex-wrap: nowrap;
+}
+.feature_complete, .feature_incomplete {
+  width: 14em;
+  margin: auto;
+  margin-bottom: .5em;
+  height: 1.8em;
+}
+.feature_complete {
+  background: grey;
+  color: white;
+  border-radius: .3em;
+  border: none;
+}
+.feature_incomplete {
+  background: white;
+  color: black;
+  border-radius: .3em;
+  border: .1px grey solid;
+}

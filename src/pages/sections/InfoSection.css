@@ -1,0 +1,63 @@
+/* Info Section */
+#info_wrapper {
+  display:block;
+  position: relative;
+  width:90%;
+  margin: auto;
+  z-index: 1;
+}
+/* Featured Tech */
+#info_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: -2em;
+  margin-bottom: 1em;
+}
+.info_feature {
+  margin: 2em;
+  min-width: 10em;
+  max-width: 20em;
+  min-height:10em;
+  flex: 1 1 0;
+}
+.info_img {
+  margin-bottom: 1em;
+  display: block;
+  max-width: 6em;
+  min-width: 5em; 
+}
+#info_title {
+  padding: .5em;
+  text-align: center;
+}
+/* Social Buttons */
+#buttons {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  max-width: 70em;
+  margin: auto;
+}
+#button_twitter {
+  background: #A3DDE9;
+  color: #000000;
+}
+#button_discord {
+  background: #635BFF;
+  color: #FFFFFF;
+}
+#button_github {
+  background: #222222;
+  color: #FFFFFF;
+}
+#button_blog {
+  background: #F5CC66;
+  color: #000000;
+}
+#button_docs {
+  background: #FFFFFF;
+  color: #000000;
+}

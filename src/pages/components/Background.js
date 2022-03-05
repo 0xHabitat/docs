@@ -1,4 +1,6 @@
+// import { styles } from "prism-react-renderer/themes/palenight";
 import React from "react";
+import styles from '../index.module.css';
 
 const MAX_LIGHTNESS = 10;
 const MIN_LIGHTNESS = 80;
@@ -27,7 +29,7 @@ function drawPixel ({ x, y, min, max, lightness, ctx }) {
   ctx.fillRect(x, y, 1, 1);
 }
 
-class BackgroundAnimation extends React.Component {
+class Background extends React.Component {
   constructor(props) {
     super(props)
     this.canvasRef = React.createRef();
@@ -49,13 +51,13 @@ class BackgroundAnimation extends React.Component {
   
   render() {
     return (
-      <div className='background__container'>
-        <div className='background__wrapper'>
-          <canvas width='8' height='8' className='background__animation' ref={this.canvasRef} />
+      <div>
+        <div className={styles.background_wrapper}>
+          <canvas width='8' height='12' className='background_animation' ref={this.canvasRef} />
         </div>
       </div>
     )
   }
 }
 
-export default BackgroundAnimation;
+export default Background;

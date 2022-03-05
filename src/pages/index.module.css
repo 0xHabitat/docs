@@ -3,59 +3,165 @@
  * and scoped locally.
  */
 
- .buttons {
+/* @dev manages the height of each section, which allows the svg shapes and background animation to scale properly */
+
+@media screen and (max-width: 370px) {
+  .landing {
+    --height_about: 60em;
+    --height_token: 80em;
+    --height_diamond: 38em;
+    --height_roadmap: 40em;
+    --height_info: 120em;
+  }
+}
+@media screen and (min-width: 370px) {
+  .landing {
+    --height_about: 55em;
+    --height_token: 75em;
+    --height_diamond: 42em;
+    --height_roadmap: 40em;
+    --height_info: 112em;
+  }
+}
+@media screen and (min-width: 600px) {
+  .landing {
+    --height_about: 50em;
+    --height_token: 65em;
+    --height_diamond: 35em;
+    --height_roadmap: 45em;
+    --height_info: 80em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .landing {
+    --height_about: 45em;
+    --height_token: 48em;
+    --height_diamond: 40em; 
+    --height_roadmap: 46em;
+    --height_info: 55em;
+  }
+}
+@media screen and (min-width: 996px) {
+  .landing {
+    --height_about: 38em; 
+    --height_token: 40em;
+    --height_diamond: 45em;
+    --height_roadmap: 30em;
+    --height_info: 55em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing {
+    --height_about: 38em;
+    --height_token: 38em;
+    --height_diamond: 45em;
+    --height_roadmap: 30em;
+    --height_info: 55em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .landing {
+    --height_about: 42em;
+    --height_token: 44em;
+    --height_diamond: 45em;
+    --height_roadmap: 30em;
+    --height_info: 57em;
+  }
+  p {
+    font-size: 1.25em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .landing {
+    --height_about: 44em;
+    --height_token: 50em;
+    --height_diamond: 48em;
+    --height_roadmap: 30em;
+    --height_info: 62em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 2.25em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+}
+.background_wrapper {
+  display:block;
+  position:absolute;
+  height: calc(var(--height_about) + var(--height_token) + var(--height_diamond) + var(--height_roadmap) + var(--height_info));
+  width: 100vw;
+  overflow: hidden;
+}
+.section_about, .section_diamond, .section_token, .section_roadmap, .section_info {  
+  /* border: 5px slateblue solid; */
+  position: relative;
+  display: flex;
+}
+.section_about { 
+  /* border: 5px slateblue solid; */
+  height: var(--height_about); 
+}
+.section_diamond { 
+  /* border: 5px slateblue solid; */
+  height: var(--height_diamond); 
+}
+.section_token { 
+  /* border: 5px slateblue solid; */
+  height: var(--height_token); 
+}
+.section_roadmap { 
+  /* border: 5px slateblue solid; */
+  height: var(--height_roadmap); 
+}
+.section_info { 
+  /* border: 5px slateblue solid; */
+  height: var(--height_info); 
+}
+.shapes {
+  fill: #fff;
+  z-index: 0;
+  position:absolute;
+}
+html[data-theme=dark] .shapes {
+  fill: #000;
+}
+
+.svg_img {
+  --svg_fill: black;
+  --svg_stroke: white;
+  --invert_amount: 0%;
+}
+html[data-theme=dark] .svg_img {
+  --svg_fill: white;
+  --svg_stroke: black;
+  --invert_amount: 100%;
+}
+
+
+.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-/* @notice Landing page body */
-/* banner (hero) section */
-.section__banner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-@media screen and (max-width: 966px) {
-  .section__banner {
-    padding: 2rem;
-  }
-}
-/* about section */
-.section__about {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
-/* diamond section */
-.section__diamond {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
-/* token section */
-.section__token {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
-/* roadmap section */
-.section__roadmap {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
-/* tech section */
-.section__tech {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
-}
-/* social section */
-.section__socials {
-  display:block;
-  height: 20em;
-  border: 1px blueviolet solid;
 }
