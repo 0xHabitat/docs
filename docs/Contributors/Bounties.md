@@ -4,7 +4,7 @@ This policy allows to write out rewards to complete required tasks. Completed ta
 #### How to create a new bounty?
 Create an issue with bounty description and a bounty tag in an appropriate repository. see: [Habitat Github](https://github.com/0xHabitat/habitat/issues/new?assignees=&labels=Bounty&template=Bounty.md&title=)
 
-Communicate the bounty to the organisation by submitting the bounty in the discord channel: "Workbench" or via the "Bounty Board".
+Communicate the bounty to the organisation by submitting the bounty in the discord channel on the [Bounty Board](https://discord.com/channels/768756174433943554/941332950790864967).
 
 #### Objections
 Any bounty can be objected by anyone through communication channel or GitHub for 2 days after its creation.
