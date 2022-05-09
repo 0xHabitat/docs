@@ -19,10 +19,6 @@ The framework is just a proof of concept, this documentation contains more featu
 
 Gemcutter is a set of [Hardhat](https://hardhat.org/) tasks built to provide a simple way to develop and deploy EIP-2535 Diamonds. It uses a file to sync the local changes to the blockchain.
 
-
-## Sourcify verification
-Gemcutter works with [Sourcify](https://sourcify.dev/), all the deployed facets are going to be verified on Sourcify.
-
 ## The Diamond file
 
 Gemcutter uses **.diamond.json** files to keep track of the status of the diamond.
